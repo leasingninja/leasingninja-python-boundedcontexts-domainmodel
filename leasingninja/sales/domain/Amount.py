@@ -8,3 +8,10 @@ class Amount:
 
     def currency(self) -> str:
         return self._currency
+
+    def __eq__(self, other):
+        return (
+            self.__class__ == other.__class__ and
+            self._amount == other._amount and
+            self._currency == other._currency
+        )
