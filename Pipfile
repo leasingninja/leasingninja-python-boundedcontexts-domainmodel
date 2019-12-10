@@ -1,0 +1,11 @@
+[[source]]
+name = "LeasingNinja"
+url = "https://www.leasingninja.io"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+
+[requires]
+python_version = "3.7"
