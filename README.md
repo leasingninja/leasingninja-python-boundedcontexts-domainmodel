@@ -1,8 +1,17 @@
 # leasingninja-python-boundedcontexts-domainmodel
+
 The LeasingNinja in Python with DDD style bounded contexts and domain model.
 
+## Daily Development
+
+```fish
+pipenv shell
+python3 -m unittest
+```
+
 ## When Homebrew and Pipenv mess up
-```bash
+
+```fish
 brew uninstall pipenv
 rm -rf ~/.local/share/virtualenvs/*
 brew reinstall python
