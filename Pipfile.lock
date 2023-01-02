@@ -1,0 +1,20 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "ffcac6e3463b3e14beb2f4b4ac0986d49f265c8ad9bca9a21d169721f2618c5d"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.11"
+        },
+        "sources": [
+            {
+                "name": "LeasingNinja",
+                "url": "https://www.leasingninja.io",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {},
+    "develop": {}
+}
