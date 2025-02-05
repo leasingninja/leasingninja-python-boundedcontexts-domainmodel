@@ -40,6 +40,22 @@ class AmountTest(unittest.TestCase):
         # assertThat(areEqual).isTrue();
         self.assertFalse(are_equal)
 
+    def test_givenTwoAmountsWithUnequalClasses_whenEquals_thenAreNotEqual(self):
+        # given
+        class OtherAmount:
+            def __init__(self):
+                self._amount = 100
+                self._currency = "EUR"
+        amount1: Amount = Amount(100, "EUR")
+        amount2: OtherAmount = OtherAmount()
+
+        # when
+        are_equal: bool = amount1 == amount2
+
+        # then
+        # assertThat(areEqual).isTrue();
+        self.assertFalse(are_equal)
+
 
 if __name__ == '__main__':
     unittest.main()
