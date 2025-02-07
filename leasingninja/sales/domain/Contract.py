@@ -1,5 +1,6 @@
 from datetime import date
 from dataclasses import dataclass
+from typing import Optional
 
 from .Amount import Amount
 
@@ -28,11 +29,11 @@ class SignDate:
 
 class Contract:
     def __init__(self, number: ContractNumber, lessee: Customer, car: Car, price: Amount):
-        self._number = number
-        self._lessee = lessee
-        self._car = car
+        self._number: ContractNumber = number
+        self._lessee: Customer = lessee
+        self._car: Car = car
         self._price: Amount = price
-        self._sign_date = None
+        self._sign_date: Optional[SignDate] = None
 
     def is_signed(self) -> bool:
         return self._sign_date is not None
@@ -46,4 +47,5 @@ class Contract:
 
     def sign_date(self) -> SignDate:
         assert self.is_signed()
+        assert self._sign_date is not None # to silence mypy
         return self._sign_date
