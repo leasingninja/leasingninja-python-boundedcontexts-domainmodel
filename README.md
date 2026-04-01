@@ -5,16 +5,15 @@ The LeasingNinja in Python with DDD style bounded contexts and domain model.
 ## Daily Development
 
 ```fish
-pipenv shell
-python3 -m unittest
+python3 -m venv .venv
+source .venv/bin/activate.fish
+pip install pytest
+pytest
 ```
 
-## When Homebrew and Pipenv mess up
+## When Python setup messes up
 
 ```fish
-brew uninstall pipenv
-rm -rf ~/.local/share/virtualenvs/*
-brew reinstall python
-brew install pipenv
-pipenv install
+rm -rf .venv
+python3 -m venv .venv
 ```
